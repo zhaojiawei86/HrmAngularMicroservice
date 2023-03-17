@@ -1,0 +1,16 @@
+export interface Employee {
+  id: number,
+  firstName: string | null | undefined,
+  middleName: string | null | undefined,
+  lastName: string | null | undefined,
+  ssn: string | null | undefined,
+  hireDate: string | null | undefined,
+  endDate: string | null | undefined,
+  employeeCategoryId: string | null | undefined,
+  employeeStatusId: string | null | undefined,
+  address: string | null | undefined,
+  email: string | null | undefined,
+  employeeRoleId: string | null | undefined,
+  dob: string | null | undefined,
+  phone: string | null | undefined,
+}

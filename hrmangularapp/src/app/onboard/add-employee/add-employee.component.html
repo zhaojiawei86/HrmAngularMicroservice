@@ -1,0 +1,185 @@
+<div class="container">
+  <br />
+  <h1>Add Employee</h1>
+  <br />
+
+  <form [formGroup]="addEmployeeFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>First Name</span>
+        <input type="text" formControlName="firstName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="firstName && firstName.invalid && firstName.touched"
+          >Invalid first name</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Middle Name</span>
+        <input type="text" formControlName="middleName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="middleName && middleName.invalid && middleName.touched"
+          >Invalid middle name</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Last Name</span>
+        <input type="text" formControlName="lastName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="lastName && lastName.invalid && lastName.touched"
+          >Invalid last name</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>SSN</span>
+        <input type="text" formControlName="ssn" class="form-control" />
+        <span class="text-danger" *ngIf="ssn && ssn.invalid && ssn.touched"
+          >Invalid ssn</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>hireDate</span>
+        <input type="date" formControlName="hireDate" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="hireDate && hireDate.invalid && hireDate.touched"
+          >Invalid hireDate</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>endDate</span>
+        <input type="date" formControlName="endDate" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="endDate && endDate.invalid && endDate.touched"
+          >Invalid endDate</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>employeeCategoryId</span>
+        <input
+          type="number"
+          formControlName="employeeCategoryId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            employeeCategoryId &&
+            employeeCategoryId.invalid &&
+            employeeCategoryId.touched
+          "
+          >Invalid employeeCategoryId</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>employeeStatusId</span>
+        <input
+          type="number"
+          formControlName="employeeStatusId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            employeeStatusId &&
+            employeeStatusId.invalid &&
+            employeeStatusId.touched
+          "
+          >Invalid employeeStatusId</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>address</span>
+        <input type="text" formControlName="address" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="address && address.invalid && address.touched"
+          >Invalid address</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>email</span>
+        <input type="email" formControlName="email" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="email && email.invalid && email.touched"
+          >Invalid email</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>employeeRoleId</span>
+        <input
+          type="number"
+          formControlName="employeeRoleId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            employeeRoleId && employeeRoleId.invalid && employeeRoleId.touched
+          "
+          >Invalid employeeRoleId</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>dob</span>
+        <input type="date" formControlName="dob" class="form-control" />
+        <span class="text-danger" *ngIf="dob && dob.invalid && dob.touched"
+          >Invalid dob</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>Mobile</span>
+        <input type="text" formControlName="phone" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="phone && phone.invalid && phone.touched"
+          >Invalid phone</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addEmployeeFormGroup.invalid"
+          value="Save Employee"
+          class="btn btn-primary"
+          (click)="saveEmployee()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

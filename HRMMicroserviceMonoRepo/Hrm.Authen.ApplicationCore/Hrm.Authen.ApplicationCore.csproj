@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="System.Data.SqlClient" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Entity\" />
+    <None Remove="Contract\" />
+    <None Remove="Model\" />
+    <None Remove="Contract\Repository\" />
+    <None Remove="Contract\ervice\" />
+    <None Remove="Model\Request\" />
+    <None Remove="Model\Response\" />
+    <None Remove="Azure.Storage.Blobs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.15.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entity\" />
+    <Folder Include="Contract\" />
+    <Folder Include="Model\" />
+    <Folder Include="Contract\Repository\" />
+    <Folder Include="Contract\Service\" />
+    <Folder Include="Model\Request\" />
+    <Folder Include="Model\Response\" />
+  </ItemGroup>
+</Project>

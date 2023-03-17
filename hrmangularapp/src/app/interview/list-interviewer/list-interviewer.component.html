@@ -1,0 +1,37 @@
+<div class="container">
+  <br />
+  <h1>Interviewer List</h1>
+  <br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>employeeId</th>
+        <th colspan="2">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of interviewerCollections">
+        <td>{{ c.id }}</td>
+        <td>{{ c.firstName }}</td>
+        <td>{{ c.lastName }}</td>
+        <td>{{ c.employeeId }}</td>
+        <td>
+          <input type="button" class="btn btn-info" value="Edit" />
+        </td>
+
+        <td>
+          <input
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteInterviewer(c.id)"
+            value="Delete"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+  <br />
+  <h1>Add EmployeeStatus</h1>
+  <br />
+  <form [formGroup]="addEmployeeStatusFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>title</span>
+        <input type="text" formControlName="title" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="title && title.invalid && title.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>abbr</span>
+        <input type="text" formControlName="abbr" class="form-control" />
+        <span class="text-danger" *ngIf="abbr && abbr.invalid && abbr.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addEmployeeStatusFormGroup.invalid"
+          value="Save EmployeeStatus"
+          class="btn btn-primary"
+          (click)="saveEmployeeStatus()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

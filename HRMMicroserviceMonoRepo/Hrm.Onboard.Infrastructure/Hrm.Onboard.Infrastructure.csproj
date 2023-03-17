@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Data\" />
+    <None Remove="Repsoitory\" />
+    <None Remove="Service\" />
+    <None Remove="System.Data.SqlClient" />
+    <None Remove="Azure.Storage.Blobs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.15.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hrm.Onboard.ApplicationCore\Hrm.Onboard.ApplicationCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Repsoitory\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+</Project>

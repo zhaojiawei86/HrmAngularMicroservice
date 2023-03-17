@@ -1,0 +1,43 @@
+<div class="container">
+  <br />
+  <h1>Add InterviewFeedback</h1>
+  <br />
+
+  <form [formGroup]="addInterviewFeedbackFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>Rating</span>
+        <input type="text" formControlName="raring" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="raring && raring.invalid && raring.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>comment</span>
+        <input type="text" formControlName="comment" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="comment && comment.invalid && comment.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addInterviewFeedbackFormGroup.invalid"
+          value="Save InterviewFeedback"
+          class="btn btn-primary"
+          (click)="saveInterviewFeedback()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

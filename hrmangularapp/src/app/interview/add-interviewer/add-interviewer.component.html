@@ -1,0 +1,58 @@
+<div class="container">
+  <br />
+  <h1>Add Interviewer</h1>
+  <br />
+
+  <form [formGroup]="addInterviewerFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>First Name</span>
+        <input type="text" formControlName="firstName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="firstName && firstName.invalid && firstName.touched"
+          >Invalid first name</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>Last Name</span>
+        <input type="text" formControlName="lastName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="lastName && lastName.invalid && lastName.touched"
+          >Invalid last name</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>EmployeeId</span>
+        <input
+          type="number"
+          formControlName="employeeId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="employeeId && employeeId.invalid && employeeId.touched"
+          >Invalid employeeId</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addInterviewerFormGroup.invalid"
+          value="Save Interviewer"
+          class="btn btn-primary"
+          (click)="saveInterviewer()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+  <br />
+  <h1>UserRole List</h1>
+  <br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>roleId</th>
+        <th>accountId</th>
+        <th colspan="2">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of userRoleCollections">
+        <td>{{ c.id }}</td>
+        <td>{{ c.roleId }}</td>
+        <td>{{ c.accountId }}</td>
+        <td>
+          <input type="button" class="btn btn-info" value="Edit" />
+        </td>
+
+        <td>
+          <input
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteUserRole(c.id)"
+            value="Delete"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

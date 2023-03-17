@@ -1,0 +1,103 @@
+<div class="container">
+  <br />
+  <h1>Add Candidate</h1>
+  <br />
+
+  <form [formGroup]="addCandidateFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>First Name</span>
+        <input type="text" formControlName="firstName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="firstName && firstName.invalid && firstName.touched"
+          >Invalid first name</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Middle Name</span>
+        <input type="text" formControlName="middleName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="middleName && middleName.invalid && middleName.touched"
+          >Invalid middle name</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Last Name</span>
+        <input type="text" formControlName="lastName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="lastName && lastName.invalid && lastName.touched"
+          >Invalid last name</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Mobile</span>
+        <input type="text" formControlName="mobile" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="mobile && mobile.invalid && mobile.touched"
+          >Invalid mobile</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Email</span>
+        <input type="text" formControlName="email" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="email && email.invalid && email.touched"
+          >Invalid email</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Current Address</span>
+        <input
+          type="text"
+          formControlName="currentAddress"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            currentAddress && currentAddress.invalid && currentAddress.touched
+          "
+          >Invalid currentAddress</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Resume Url</span>
+        <input
+          type="file"
+          formControlName="resumeUrl"
+          (change)="fileUpload(this)"
+          class="form-control"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addCandidateFormGroup.invalid"
+          value="Save Candidate"
+          class="btn btn-primary"
+          (click)="saveCandidate()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

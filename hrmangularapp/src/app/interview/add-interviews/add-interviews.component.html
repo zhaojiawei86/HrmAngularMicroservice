@@ -1,0 +1,139 @@
+<div class="container">
+  <br />
+  <h1>Add Interviews</h1>
+  <br />
+  <form [formGroup]="addInterviewsFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>recruiterId</span>
+        <input
+          type="number"
+          formControlName="recruiterId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="recruiterId && recruiterId.invalid && recruiterId.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>submissionId</span>
+        <input
+          type="number"
+          formControlName="submissionId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="submissionId && submissionId.invalid && submissionId.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>interviewTypeId</span>
+        <input
+          type="number"
+          formControlName="interviewTypeId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            interviewTypeId &&
+            interviewTypeId.invalid &&
+            interviewTypeId.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>interviewRound</span>
+        <input
+          type="number"
+          formControlName="interviewRound"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            interviewRound && interviewRound.invalid && interviewRound.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>interviewDate</span>
+        <input
+          type="date"
+          formControlName="interviewDate"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            interviewDate && interviewDate.invalid && interviewDate.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>interviewerId</span>
+        <input
+          type="number"
+          formControlName="interviewerId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            interviewerId && interviewerId.invalid && interviewerId.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>interviewFeedbackId</span>
+        <input
+          type="number"
+          formControlName="interviewFeedbackId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            interviewFeedbackId &&
+            interviewFeedbackId.invalid &&
+            interviewFeedbackId.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addInterviewsFormGroup.invalid"
+          value="Save Interviews"
+          class="btn btn-primary"
+          (click)="saveInterviews()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

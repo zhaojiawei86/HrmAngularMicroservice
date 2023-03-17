@@ -1,0 +1,214 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">HRM</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Recruit
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="'/recruit/add-candidate'"
+            >Add Candidate</a
+          >
+          <a class="dropdown-item" [routerLink]="'/recruit/list-candidate'"
+            >Candidate List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/recruit/add-submission'"
+            >Add Submission</a
+          >
+          <a class="dropdown-item" [routerLink]="'/recruit/list-submission'"
+            >Submission List</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="'/recruit/add-submissionStatus'"
+            >Add SubmissionStatus</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="'/recruit/list-submissionStatus'"
+            >SubmissionStatus List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/recruit/add-jobRequirement'"
+            >Add JobRequirement</a
+          >
+          <a class="dropdown-item" [routerLink]="'/recruit/list-jobRequirement'"
+            >JobRequirement List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/recruit/add-jobCategory'"
+            >Add JobCategory</a
+          >
+          <a class="dropdown-item" [routerLink]="'/recruit/list-jobCategory'"
+            >JobCategory List</a
+          >
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Interview
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="'/interview/add-interviewer'"
+            >Add Interviewer</a
+          >
+          <a class="dropdown-item" [routerLink]="'/interview/list-interviewer'"
+            >Interviewer List</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="'/interview/add-interviewFeedback'"
+            >Add InterviewFeedback</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="'/interview/list-interviewFeedback'"
+            >InterviewFeedback List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/interview/add-interviews'"
+            >Add Interviews</a
+          >
+          <a class="dropdown-item" [routerLink]="'/interview/list-interviews'"
+            >Interviews List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/interview/add-interviewType'"
+            >Add InterviewType</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="'/interview/list-interviewType'"
+            >InterviewType List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/interview/add-recruiter'"
+            >Add Recruiter</a
+          >
+          <a class="dropdown-item" [routerLink]="'/interview/list-recruiter'"
+            >Recruiter List</a
+          >
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Onboard
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="'/onboard/add-employee'"
+            >Add Employee</a
+          >
+          <a class="dropdown-item" [routerLink]="'/onboard/list-employee'"
+            >Employee List</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="'/onboard/add-employeeCategory'"
+            >Add EmployeeCategory</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="'/onboard/list-employeeCategory'"
+            >EmployeeCategory List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/onboard/add-employeeRole'"
+            >Add EmployeeRole</a
+          >
+          <a class="dropdown-item" [routerLink]="'/onboard/list-employeeRole'"
+            >EmployeeRole List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/onboard/add-employeeStatus'"
+            >Add EmployeeStatus</a
+          >
+          <a class="dropdown-item" [routerLink]="'/onboard/list-employeeStatus'"
+            >EmployeeStatus List</a
+          >
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Authentication
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="'/authen/add-account'"
+            >Add Account</a
+          >
+          <a class="dropdown-item" [routerLink]="'/authen/list-account'"
+            >Account List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/authen/add-role'"
+            >Add Role</a
+          >
+          <a class="dropdown-item" [routerLink]="'/authen/list-role'"
+            >Role List</a
+          >
+          <a class="dropdown-item" [routerLink]="'/authen/add-userRole'"
+            >Add UserRole</a
+          >
+          <a class="dropdown-item" [routerLink]="'/authen/list-userRole'"
+            >UserRole List</a
+          >
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

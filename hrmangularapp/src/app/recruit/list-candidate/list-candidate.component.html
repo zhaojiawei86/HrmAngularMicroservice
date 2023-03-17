@@ -1,0 +1,45 @@
+<div class="container">
+  <br />
+  <h1>Candidate List</h1>
+  <br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>firstName</th>
+        <th>middleName</th>
+        <th>lastName</th>
+        <th>mobile</th>
+        <th>email</th>
+        <th>currentAddress</th>
+        <th>resumeUrl</th>
+        <th colspan="2">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of candidateCollections">
+        <td>{{ c.id }}</td>
+        <td>{{ c.firstName }}</td>
+        <td>{{ c.middleName }}</td>
+        <td>{{ c.lastName }}</td>
+        <td>{{ c.mobile }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.currentAddress }}</td>
+        <td>{{ c.resumeUrl }}</td>
+        <td>
+          <input type="button" class="btn btn-info" value="Edit" />
+        </td>
+
+        <td>
+          <input
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteCandidate(c.id)"
+            value="Delete"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

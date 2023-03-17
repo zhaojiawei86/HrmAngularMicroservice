@@ -1,0 +1,52 @@
+<div class="container">
+  <br />
+  <h1>JobRequirement List</h1>
+  <br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>NoOfPosition</th>
+        <th>HiringManagerId</th>
+        <th>HiringManagerName</th>
+        <th>CreatedOn</th>
+        <th>ClosedOn</th>
+        <th>StartDate</th>
+        <th>IsActive</th>
+        <th>JobCategoryId</th>
+        <th colspan="2">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of jobRequirementCollections">
+        <td>{{ c.id }}</td>
+        <td>{{ c.title }}</td>
+        <td>{{ c.description }}</td>
+        <td>{{ c.noOfPosition }}</td>
+        <td>{{ c.hiringManagerId }}</td>
+        <td>{{ c.hiringManagerName }}</td>
+        <td>{{ c.createdOn }}</td>
+        <td>{{ c.closedOn }}</td>
+        <td>{{ c.startDate }}</td>
+        <td>{{ c.isActive }}</td>
+        <td>{{ c.jobCategoryId }}</td>
+
+        <td>
+          <input type="button" class="btn btn-info" value="Edit" />
+        </td>
+
+        <td>
+          <input
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteJobRequirement(c.id)"
+            value="Delete"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

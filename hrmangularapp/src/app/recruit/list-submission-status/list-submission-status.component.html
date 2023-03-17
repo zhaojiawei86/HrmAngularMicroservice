@@ -1,0 +1,35 @@
+<div class="container">
+  <br />
+  <h1>SubmissionStatus List</h1>
+  <br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>IsActive</th>
+        <th colspan="2">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of submissionStatusCollections">
+        <td>{{ c.id }}</td>
+        <td>{{ c.title }}</td>
+        <td>{{ c.isActive }}</td>
+        <td>
+          <input type="button" class="btn btn-info" value="Edit" />
+        </td>
+
+        <td>
+          <input
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteSubmissionStatus(c.id)"
+            value="Delete"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

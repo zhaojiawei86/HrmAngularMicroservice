@@ -1,0 +1,43 @@
+<div class="container">
+  <br />
+  <h1>Submission List</h1>
+  <br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>CandidateId</th>
+        <th>JobRequirementId</th>
+        <th>AppliedDate</th>
+        <th>ConfirmedOn</th>
+        <th>RejectedOn</th>
+        <th>SubmissionStatusId</th>
+        <th colspan="2">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of submissionCollections">
+        <td>{{ c.id }}</td>
+        <td>{{ c.candidateId }}</td>
+        <td>{{ c.jobRequirementId }}</td>
+        <td>{{ c.appliedDate }}</td>
+        <td>{{ c.confirmedOn }}</td>
+        <td>{{ c.rejectedOn }}</td>
+        <td>{{ c.submissionStatusId }}</td>
+        <td>
+          <input type="button" class="btn btn-info" value="Edit" />
+        </td>
+
+        <td>
+          <input
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteSubmission(c.id)"
+            value="Delete"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

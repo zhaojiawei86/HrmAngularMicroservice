@@ -1,0 +1,39 @@
+<div class="container">
+  <br />
+  <h1>Add Role</h1>
+  <br />
+  <form [formGroup]="addRoleFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>name</span>
+        <input type="text" formControlName="name" class="form-control" />
+        <span class="text-danger" *ngIf="name && name.invalid && name.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>description</span>
+        <input type="text" formControlName="description" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="description && description.invalid && description.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addRoleFormGroup.invalid"
+          value="Save Role"
+          class="btn btn-primary"
+          (click)="saveRole()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,89 @@
+<div class="container">
+  <br />
+  <h1>Add Account</h1>
+  <br />
+
+  <form [formGroup]="addAccountFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>First Name</span>
+        <input type="text" formControlName="firstName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="firstName && firstName.invalid && firstName.touched"
+          >Invalid first name</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>Last Name</span>
+        <input type="text" formControlName="lastName" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="lastName && lastName.invalid && lastName.touched"
+          >Invalid last name</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>emloyeeId</span>
+        <input type="number" formControlName="emloyeeId" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="emloyeeId && emloyeeId.invalid && emloyeeId.touched"
+          >Invalid emloyeeId</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Email</span>
+        <input type="text" formControlName="email" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="email && email.invalid && email.touched"
+          >Invalid email</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>hashPassword</span>
+        <input
+          type="text"
+          formControlName="hashPassword"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="hashPassword && hashPassword.invalid && hashPassword.touched"
+          >Invalid hashPassword</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>salt</span>
+        <input type="text" formControlName="salt" class="form-control" />
+        <span class="text-danger" *ngIf="salt && salt.invalid && salt.touched"
+          >Invalid salt</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addAccountFormGroup.invalid"
+          value="Save Account"
+          class="btn btn-primary"
+          (click)="saveAccount()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

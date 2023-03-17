@@ -1,0 +1,154 @@
+<div class="container">
+  <br />
+  <h1>Add JobRequirement</h1>
+  <br />
+  <form [formGroup]="addJobRequirementFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>title</span>
+        <input type="text" formControlName="title" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="title && title.invalid && title.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>Description</span>
+        <input type="text" formControlName="description" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="description && description.invalid && description.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>noOfPosition</span>
+        <input
+          type="number"
+          formControlName="noOfPosition"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="noOfPosition && noOfPosition.invalid && noOfPosition.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>hiringManagerId</span>
+        <input
+          type="number"
+          formControlName="hiringManagerId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            hiringManagerId &&
+            hiringManagerId.invalid &&
+            hiringManagerId.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>hiringManagerName</span>
+        <input
+          type="text"
+          formControlName="hiringManagerName"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            hiringManagerName &&
+            hiringManagerName.invalid &&
+            hiringManagerName.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>createdOn</span>
+        <input type="date" formControlName="createdOn" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="createdOn && createdOn.invalid && createdOn.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>closedOn</span>
+        <input type="date" formControlName="closedOn" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="closedOn && closedOn.invalid && closedOn.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>startDate</span>
+        <input type="date" formControlName="startDate" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="startDate && startDate.invalid && startDate.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>Is Active</span>
+        <input type="checkbox" formControlName="isActive" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <span>jobCategoryId</span>
+        <input
+          type="number"
+          formControlName="jobCategoryId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            jobCategoryId && jobCategoryId.invalid && jobCategoryId.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addJobRequirementFormGroup.invalid"
+          value="Save JobRequirement"
+          class="btn btn-primary"
+          (click)="saveJobRequirement()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

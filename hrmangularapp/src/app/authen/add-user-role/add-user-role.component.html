@@ -1,0 +1,41 @@
+<div class="container">
+  <br />
+  <h1>Add UserRole</h1>
+  <br />
+  <form [formGroup]="addUserRoleFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>roleId</span>
+        <input type="number" formControlName="roleId" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="roleId && roleId.invalid && roleId.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>accountId</span>
+        <input type="number" formControlName="accountId" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="accountId && accountId.invalid && accountId.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addUserRoleFormGroup.invalid"
+          value="Save UserRole"
+          class="btn btn-primary"
+          (click)="saveUserRole()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

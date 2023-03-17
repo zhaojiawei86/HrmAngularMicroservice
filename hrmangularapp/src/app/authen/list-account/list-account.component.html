@@ -1,0 +1,43 @@
+<div class="container">
+  <br />
+  <h1>Account List</h1>
+  <br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>emloyeeId</th>
+        <th>email</th>
+        <th>hashPassword</th>
+        <th>salt</th>
+        <th colspan="2">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of accountCollections">
+        <td>{{ c.id }}</td>
+        <td>{{ c.firstName }}</td>
+        <td>{{ c.lastName }}</td>
+        <td>{{ c.emloyeeId }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.hashPassword }}</td>
+        <td>{{ c.salt }}</td>
+        <td>
+          <input type="button" class="btn btn-info" value="Edit" />
+        </td>
+
+        <td>
+          <input
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteAccount(c.id)"
+            value="Delete"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

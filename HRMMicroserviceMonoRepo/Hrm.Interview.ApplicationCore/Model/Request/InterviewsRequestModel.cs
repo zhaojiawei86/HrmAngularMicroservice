@@ -1,0 +1,33 @@
+﻿
+using System;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Hrm.Interview.ApplicationCore.Model.Request
+{
+	public class InterviewsRequestModel
+    {
+        public int Id { get; set; }
+
+        [Required]
+        public int RecruiterId { get; set; }
+
+        [Required]
+        public int SubmissionId { get; set; }
+
+        [Required]
+        public int InterviewTypeId { get; set; }
+
+        [Required]
+        public int InterviewRound { get; set; }
+
+        public DateTime InterviewDate { get; set; }
+
+        [Required]
+        public int InterviewerId { get; set; }
+
+        public int? InterviewFeedbackId { get; set; }
+    }
+}
+

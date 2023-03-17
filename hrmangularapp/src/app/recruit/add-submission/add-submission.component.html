@@ -1,0 +1,105 @@
+<div class="container">
+  <br />
+  <h1>Add Submission</h1>
+  <br />
+  <form [formGroup]="addSubmissionFormGroup">
+    <div class="row">
+      <div class="my-2">
+        <span>candidateId</span>
+        <input
+          type="number"
+          formControlName="candidateId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="candidateId && candidateId.invalid && candidateId.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>jobRequirementId</span>
+        <input
+          type="number"
+          formControlName="jobRequirementId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            jobRequirementId &&
+            jobRequirementId.invalid &&
+            jobRequirementId.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>appliedDate</span>
+        <input type="date" formControlName="appliedDate" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="appliedDate && appliedDate.invalid && appliedDate.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>confirmedOn</span>
+        <input type="date" formControlName="confirmedOn" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="confirmedOn && confirmedOn.invalid && confirmedOn.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>rejectedOn</span>
+        <input type="date" formControlName="rejectedOn" class="form-control" />
+        <span
+          class="text-danger"
+          *ngIf="rejectedOn && rejectedOn.invalid && rejectedOn.touched"
+          >Invalid input</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="my-2">
+        <span>submissionStatusId</span>
+        <input
+          type="number"
+          formControlName="submissionStatusId"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            submissionStatusId &&
+            submissionStatusId.invalid &&
+            submissionStatusId.touched
+          "
+          >Invalid input</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2">
+        <input
+          type="button"
+          [disabled]="addSubmissionFormGroup.invalid"
+          value="Save Submission"
+          class="btn btn-primary"
+          (click)="saveSubmission()"
+        />
+      </div>
+    </div>
+  </form>
+</div>

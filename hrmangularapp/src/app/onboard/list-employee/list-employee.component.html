@@ -1,0 +1,57 @@
+<div class="container">
+  <br />
+  <h1>Employee List</h1>
+  <br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>firstName</th>
+        <th>middleName</th>
+        <th>lastName</th>
+        <th>ssn</th>
+        <th>hireDate</th>
+        <th>endDate</th>
+        <th>employeeCategoryId</th>
+        <th>employeeStatusId</th>
+        <th>address</th>
+        <th>email</th>
+        <th>employeeRoleId</th>
+        <th>dob</th>
+        <th>phone</th>
+        <th colspan="2">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of employeeCollections">
+        <td>{{ c.id }}</td>
+        <td>{{ c.firstName }}</td>
+        <td>{{ c.middleName }}</td>
+        <td>{{ c.lastName }}</td>
+        <td>{{ c.ssn }}</td>
+        <td>{{ c.hireDate }}</td>
+        <td>{{ c.endDate }}</td>
+        <td>{{ c.employeeCategoryId }}</td>
+        <td>{{ c.employeeStatusId }}</td>
+        <td>{{ c.address }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.employeeRoleId }}</td>
+        <td>{{ c.dob }}</td>
+        <td>{{ c.phone }}</td>
+        <td>
+          <input type="button" class="btn btn-info" value="Edit" />
+        </td>
+
+        <td>
+          <input
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteEmployee(c.id)"
+            value="Delete"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

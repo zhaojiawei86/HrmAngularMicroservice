@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+  hrm.interview.apilayer:
+    image: ${DOCKER_REGISTRY-}hrminterview
+    ports:
+        - "7291:80"
+    build:
+      context: .
+      dockerfile: Hrm.Interview.APILayer/Dockerfile
+
+  hrm.recruitment.apilayer:
+    image: ${DOCKER_REGISTRY-}hrmrecruitment
+    ports:
+        - "7292:80"
+    build:
+      context: .
+      dockerfile: Hrm.Recruitment.APILayer/Dockerfile
+
+
+  hrm.onboard.apilayer:
+    image: ${DOCKER_REGISTRY-}hrmonboard
+    ports:
+        - "7293:80"
+    build:
+      context: .
+      dockerfile: Hrm.Onboard.APILayer/Dockerfile
+
+
+  hrm.authen.apilayer:
+    image: ${DOCKER_REGISTRY-}hrmauthen
+    ports:
+        - "7294:80"
+    build:
+      context: .
+      dockerfile: Hrm.Authen.APILayer/Dockerfile
+

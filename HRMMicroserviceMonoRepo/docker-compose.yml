@@ -11,6 +11,7 @@ services:
 
   hrm.recruitment.apilayer:
     image: ${DOCKER_REGISTRY-}hrmrecruitment
+    hostname: "recruitmentapi"
     ports:
         - "7292:80"
     build:
@@ -34,4 +35,13 @@ services:
     build:
       context: .
       dockerfile: Hrm.Authen.APILayer/Dockerfile
+
+
+  apigatewaylayer:
+    image: ${DOCKER_REGISTRY-}apigatewaylayer
+    ports:
+        - "8001:80"
+    build:
+      context: .
+      dockerfile: APIGatewayLayer/Dockerfile
 

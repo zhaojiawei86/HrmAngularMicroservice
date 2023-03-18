@@ -18,8 +18,8 @@ var connectionString = builder.Configuration.GetConnectionString("HrmAuthenDb");
 var dockerConnStr = Environment.GetEnvironmentVariable("HrmAuthenDb");
 builder.Services.AddDbContext<AuthenDbContext>(options =>
 {
-    options.UseSqlServer(connectionString);
-    //options.UseSqlServer(dockerConnStr);
+    //options.UseSqlServer(connectionString);
+    options.UseSqlServer(dockerConnStr);
 });
 
 // Dependency injection for repositories

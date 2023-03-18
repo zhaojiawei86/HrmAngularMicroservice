@@ -20,8 +20,8 @@ var connectionString = builder.Configuration.GetConnectionString("HrmInterviewDb
 var dockerConnStr = Environment.GetEnvironmentVariable("HrmInterviewDb");
 builder.Services.AddDbContext<InterviewDbContext>(options =>
 {
-    options.UseSqlServer(connectionString);
-    //options.UseSqlServer(dockerConnStr);
+    //options.UseSqlServer(connectionString);
+    options.UseSqlServer(dockerConnStr);
 });
 
 builder.Services.AddScoped<IInterviewTypeRepositoryAsync, InterviewTypeRepositoryAsync>();

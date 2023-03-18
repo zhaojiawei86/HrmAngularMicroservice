@@ -1,0 +1,411 @@
+﻿{
+  "Routes": [
+    // hrm.recruitment.apilayer -- candidate
+    {
+      "UpstreamPathTemplate": "/api/candidate",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/candidate"
+    },
+    {
+      "UpstreamPathTemplate": "/api/candidate/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/candidate/{i}"
+    },
+
+    // hrm.recruitment.apilayer -- jobcategory
+    {
+      "UpstreamPathTemplate": "/api/JobCategory",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobCategory"
+    },
+    {
+      "UpstreamPathTemplate": "/api/JobCategory/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobCategory/{i}"
+    },
+    // hrm.recruitment.apilayer -- JobRequirement
+    {
+      "UpstreamPathTemplate": "/api/JobRequirement",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobRequirement"
+    },
+    {
+      "UpstreamPathTemplate": "/api/JobRequirement/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/JobRequirement/{i}"
+    },
+    // hrm.recruitment.apilayer -- Submission
+    {
+      "UpstreamPathTemplate": "/api/Submission",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Submission"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Submission/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Submission/{i}"
+    },
+    // hrm.recruitment.apilayer -- SubmissionStatus
+    {
+      "UpstreamPathTemplate": "/api/SubmissionStatus",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/SubmissionStatus"
+    },
+    {
+      "UpstreamPathTemplate": "/api/SubmissionStatus/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.recruitment.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/SubmissionStatus/{i}"
+    },
+
+
+    // hrm.interview.apilayer -- Interviewer
+    {
+      "UpstreamPathTemplate": "/api/Interviewer",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.interview.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Interviewer"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Interviewer/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.interview.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Interviewer/{i}"
+    },
+    // hrm.interview.apilayer -- Interviews
+    {
+      "UpstreamPathTemplate": "/api/Interviews",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.interview.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Interviews"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Interviews/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.interview.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Interviews/{i}"
+    },
+    // hrm.interview.apilayer -- InterviewType
+    {
+      "UpstreamPathTemplate": "/api/InterviewType",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.interview.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/InterviewType"
+    },
+    {
+      "UpstreamPathTemplate": "/api/InterviewType/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.interview.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/InterviewType/{i}"
+    },
+    // hrm.interview.apilayer -- Recruiter
+    {
+      "UpstreamPathTemplate": "/api/Recruiter",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.interview.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Recruiter"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Recruiter/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.interview.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Recruiter/{i}"
+    },
+    // hrm.onboard.apilayer -- Employee
+    {
+      "UpstreamPathTemplate": "/api/Employee",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.onboard.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Employee"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Employee/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.onboard.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Employee/{i}"
+    },
+    // hrm.onboard.apilayer -- EmployeeCategory
+    {
+      "UpstreamPathTemplate": "/api/EmployeeCategory",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.onboard.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EmployeeCategory"
+    },
+    {
+      "UpstreamPathTemplate": "/api/EmployeeCategory/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.onboard.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EmployeeCategory/{i}"
+    },
+    // hrm.onboard.apilayer -- EmployeeRole
+    {
+      "UpstreamPathTemplate": "/api/EmployeeRole",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.onboard.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EmployeeRole"
+    },
+    {
+      "UpstreamPathTemplate": "/api/EmployeeRole/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.onboard.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EmployeeRole/{i}"
+    },
+    // hrm.onboard.apilayer -- EmployeeStatus
+    {
+      "UpstreamPathTemplate": "/api/EmployeeStatus",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.onboard.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EmployeeStatus"
+    },
+    {
+      "UpstreamPathTemplate": "/api/EmployeeStatus/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.onboard.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EmployeeStatus/{i}"
+    },
+    // hrm.authen.apilayer -- Account
+    {
+      "UpstreamPathTemplate": "/api/Account",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.authen.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Account"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Account/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.authen.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Account/{i}"
+    },
+    // hrm.authen.apilayer -- Role
+    {
+      "UpstreamPathTemplate": "/api/Role",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.authen.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Role"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Role/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.authen.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Role/{i}"
+    },
+    // hrm.authen.apilayer -- UserRole
+    {
+      "UpstreamPathTemplate": "/api/UserRole",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.authen.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/UserRole"
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserRole/{i}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hrm.authen.apilayer",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/UserRole/{i}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8001"
+  }
+
+}

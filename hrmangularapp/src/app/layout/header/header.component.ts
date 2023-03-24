@@ -7,9 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  constructor(private router:Router){
+  constructor(private router:Router){}
 
-  }
   logout(){
     if (localStorage.hasOwnProperty("token")){
       localStorage.removeItem("token");

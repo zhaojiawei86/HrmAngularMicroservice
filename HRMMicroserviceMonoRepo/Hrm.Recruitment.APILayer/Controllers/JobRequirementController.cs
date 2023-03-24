@@ -7,13 +7,15 @@ using Hrm.Recruitment.APILayer.Model;
 using Hrm.Recruitment.ApplicationCore.Contract.Service;
 using Hrm.Recruitment.ApplicationCore.Model.Request;
 using Hrm.Recruitment.Infrastructure.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Hrm.Recruitment.APILayer.Controller
-
 {
+
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class JobRequirementController : ControllerBase

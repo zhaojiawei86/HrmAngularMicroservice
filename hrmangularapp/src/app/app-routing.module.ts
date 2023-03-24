@@ -9,8 +9,7 @@ const routes: Routes = [
   {path:'', component:MasterlayoutComponent,
     children:[
       {path:'recruit', loadChildren:()=>import('./recruit/recruit.module').then(m=>m.RecruitModule), canActivate:[AuthGuard]},
-      {path:'interview', loadChildren:()=>import('./interview/interview.module').then(m=>m.InterviewModule )},
-      {path:'onboard', loadChildren:()=>import('./onboard/onboard.module').then(m=>m.OnboardModule )},
+      {path:'onboard', loadChildren:()=>import('./onboard/onboard.module').then(m=>m.OnboardModule), canActivate:[AuthGuard]},
       {path:'authen', loadChildren:()=>import('./authen/authen.module').then(m=>m.AuthenModule )}
     ]
   },

@@ -55,7 +55,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseRouting();
 app.UseCors();
-app.UseAuthentication();
+//app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

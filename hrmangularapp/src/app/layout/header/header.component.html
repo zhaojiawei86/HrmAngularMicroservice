@@ -219,11 +219,19 @@
         aria-label="Search"
       />
       <button
+        class="btn btn-outline-primary my-2 my-sm-0"
+        onclick="location.href = '/login';"
+        type="button"
+      >
+        Login
+      </button>
+      &nbsp;&nbsp;
+      <button
         class="btn btn-outline-danger my-2 my-sm-0"
         (click)="logout()"
         type="button"
       >
-        logout
+        Logout
       </button>
     </form>
   </div>

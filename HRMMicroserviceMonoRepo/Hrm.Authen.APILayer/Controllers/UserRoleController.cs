@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Hrm.Authen.APILayer.Controller
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserRoleController : ControllerBase

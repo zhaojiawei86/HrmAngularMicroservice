@@ -5,12 +5,14 @@ using System.Net;
 using System.Threading.Tasks;
 using Hrm.Onboard.ApplicationCore.Contract.Service;
 using Hrm.Onboard.ApplicationCore.Model.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace HumanResource.APILayer.Controller
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeCategoryController : ControllerBase

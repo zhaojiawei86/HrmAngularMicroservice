@@ -3,6 +3,7 @@ using Hrm.Onboard.ApplicationCore.Contract.Service;
 using Hrm.Onboard.Infrastructure.Data;
 using Hrm.Onboard.Infrastructure.Repsoitory;
 using Hrm.Onboard.Infrastructure.Service;
+using JwtAuthenticationManager;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddCustomeJwtAuthentication();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -50,8 +53,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseRouting();
 app.UseCors();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

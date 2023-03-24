@@ -7,12 +7,14 @@ using Hrm.Authen.ApplicationCore.Contract.Service;
 using Hrm.Authen.ApplicationCore.Model.Request;
 using JwtAuthenticationManager;
 using JwtAuthenticationManager.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Hrm.Authen.APILayer.Controller
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase

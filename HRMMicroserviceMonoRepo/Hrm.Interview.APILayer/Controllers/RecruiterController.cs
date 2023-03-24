@@ -7,12 +7,14 @@ using Hrm.Interview.APILayer.Model;
 using Hrm.Interview.ApplicationCore.Contract.Service;
 using Hrm.Interview.ApplicationCore.Model.Request;
 using Hrm.Interview.Infrastructure.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Hrm.Interview.APILayer.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class RecruiterController : ControllerBase

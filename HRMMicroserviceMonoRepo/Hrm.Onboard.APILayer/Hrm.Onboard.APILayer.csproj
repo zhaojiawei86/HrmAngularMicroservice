@@ -16,6 +16,9 @@
     </PackageReference>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.15.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.27.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.15" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,12 +27,18 @@
     <None Remove="Controllers\" />
     <None Remove="System.Data.SqlClient" />
     <None Remove="Azure.Storage.Blobs" />
+    <None Remove="System.IdentityModel.Tokens.Jwt" />
+    <None Remove="Microsoft.IdentityModel.Tokens" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hrm.Onboard.ApplicationCore\Hrm.Onboard.ApplicationCore.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
     <ProjectReference Include="..\Hrm.Onboard.Infrastructure\Hrm.Onboard.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\JwtAuthenticationManager\JwtAuthenticationManager.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

@@ -11,7 +11,7 @@ export class JobRequirementService {
 
   constructor(private http:HttpClient) { }
 
-  jobRequirementUrl:string = environment.recruitUrl + 'jobRequirement/'
+  jobRequirementUrl:string = environment.url + 'jobRequirement'
 
   saveJobRequirement(jobRequirement:JobRequirement){
     return this.http.post(this.jobRequirementUrl, jobRequirement)
@@ -23,7 +23,7 @@ export class JobRequirementService {
   }
 
   deleteJobRequirementById(id:number){
-    return this.http.delete(this.jobRequirementUrl + id)
+    return this.http.delete(this.jobRequirementUrl + '/' + id)
 
   }
 }

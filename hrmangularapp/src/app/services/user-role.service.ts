@@ -9,7 +9,7 @@ import { UserRole } from '../interface/userrole';
 })
 export class UserRoleService {
   constructor(private http:HttpClient) { }
-  userRoleUrl:string = environment.authenUrl + 'userRole/'
+  userRoleUrl:string = environment.url + 'userRole'
 
   saveUserRole(userRole:UserRole){
     return this.http.post(this.userRoleUrl, userRole)
@@ -21,6 +21,6 @@ export class UserRoleService {
   }
 
   deleteUserRoleById(id:number){
-    return this.http.delete(this.userRoleUrl + id)
+    return this.http.delete(this.userRoleUrl + '/' + id)
   }
 }

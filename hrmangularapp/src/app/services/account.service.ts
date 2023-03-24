@@ -10,7 +10,7 @@ import { Account } from '../interface/account';
 export class AccountService {
 
   constructor(private http:HttpClient) { }
-  accountUrl:string = environment.authenUrl + 'account/'
+  accountUrl:string = environment.url + 'account'
 
   saveAccount(account:Account){
     return this.http.post(this.accountUrl, account)
@@ -22,6 +22,6 @@ export class AccountService {
   }
 
   deleteAccountById(id:number){
-    return this.http.delete(this.accountUrl + id)
+    return this.http.delete(this.accountUrl + '/' + id)
   }
 }

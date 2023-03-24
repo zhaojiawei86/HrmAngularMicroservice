@@ -4,6 +4,7 @@ using Hrm.Recruitment.ApplicationCore.Contract.Service;
 using Hrm.Recruitment.Infrastructure.Data;
 using Hrm.Recruitment.Infrastructure.Repository;
 using Hrm.Recruitment.Infrastructure.Service;
+using JwtAuthenticationManager;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,12 +12,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddCustomeJwtAuthentication();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton(x => new BlobServiceClient(builder.Configuration.GetValue<string>("ResumeContainer")));
 builder.Services.AddScoped<IBlobServiceAsync, BlobServiceAsync>();
+
 
 var connectionString = builder.Configuration.GetConnectionString("HrmRecruitDb");
 var dockerConnStr = Environment.GetEnvironmentVariable("HrmRecruitDb");
@@ -58,12 +62,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseRouting();
+app.UseCors();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCors();
 
 app.Run();
 

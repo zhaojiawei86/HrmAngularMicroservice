@@ -10,7 +10,7 @@ import { environment } from '../environment/environment';
 export class CandidateService {
 
   constructor(private http:HttpClient) { }
-  candidateUrl:string = environment.recruitUrl + 'candidate/'
+  candidateUrl:string = environment.url + 'candidate'
 
   saveCandidate(candidate:Candidate){
     return this.http.post(this.candidateUrl, candidate)
@@ -22,6 +22,6 @@ export class CandidateService {
   }
 
   deleteCandidateById(id:number){
-    return this.http.delete(this.candidateUrl + id)
+    return this.http.delete(this.candidateUrl + '/' + id)
   }
 }

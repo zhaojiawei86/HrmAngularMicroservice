@@ -10,7 +10,7 @@ import { EmployeeStatus } from '../interface/employeestatus';
 export class EmployeeStatusService {
 
   constructor(private http:HttpClient) { }
-  employeeStatusUrl:string = environment.onboardUrl + 'employeeStatus/'
+  employeeStatusUrl:string = environment.url + 'employeeStatus'
 
   saveEmployeeStatus(employeeStatus:EmployeeStatus){
     return this.http.post(this.employeeStatusUrl, employeeStatus)
@@ -22,6 +22,6 @@ export class EmployeeStatusService {
   }
 
   deleteEmployeeStatusById(id:number){
-    return this.http.delete(this.employeeStatusUrl + id)
+    return this.http.delete(this.employeeStatusUrl + '/' + id)
   }
 }

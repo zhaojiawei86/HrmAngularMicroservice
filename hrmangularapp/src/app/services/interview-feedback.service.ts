@@ -10,7 +10,7 @@ import { InterviewFeedback } from '../interface/interviewfeedback';
 export class InterviewFeedbackService {
 
   constructor(private http:HttpClient) { }
-  interviewFeedbackUrl:string = environment.interviewUrl + 'interviewFeedback/'
+  interviewFeedbackUrl:string = environment.url + 'interviewFeedback'
 
   saveInterviewFeedback(interviewFeedback:InterviewFeedback){
     return this.http.post(this.interviewFeedbackUrl, interviewFeedback)
@@ -22,6 +22,6 @@ export class InterviewFeedbackService {
   }
 
   deleteInterviewFeedbackById(id:number){
-    return this.http.delete(this.interviewFeedbackUrl + id)
+    return this.http.delete(this.interviewFeedbackUrl + '/' + id)
   }
 }

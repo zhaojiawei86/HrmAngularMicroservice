@@ -26,6 +26,9 @@
     <ProjectReference Include="..\Hrm.Recruitment.Infrastructure\Hrm.Recruitment.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\JwtAuthenticationManager\JwtAuthenticationManager.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />

@@ -10,7 +10,7 @@ import { JobCategory } from '../interface/jobcategory';
 export class JobCategoryService {
 
   constructor(private http:HttpClient) { }
-  jobCategoryUrl:string = environment.recruitUrl + 'jobCategory/'
+  jobCategoryUrl:string = environment.url + 'jobCategory'
 
   saveJobCategory(jobCategory:JobCategory){
     return this.http.post(this.jobCategoryUrl, jobCategory)
@@ -21,6 +21,6 @@ export class JobCategoryService {
   }
 
   deleteJobCategoryById(id:number){
-    return this.http.delete(this.jobCategoryUrl+ id)
+    return this.http.delete(this.jobCategoryUrl+ '/' + id)
   }
 }

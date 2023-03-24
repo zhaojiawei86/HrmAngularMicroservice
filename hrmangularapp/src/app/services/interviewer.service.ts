@@ -10,7 +10,7 @@ import { Interviewer } from '../interface/interviewer';
 export class InterviewerService {
 
   constructor(private http:HttpClient) { }
-  interviewerUrl:string = environment.interviewUrl + 'interviewer/'
+  interviewerUrl:string = environment.url + 'interviewer'
 
   saveInterviewer(interviewer:Interviewer){
     return this.http.post(this.interviewerUrl, interviewer)
@@ -21,6 +21,6 @@ export class InterviewerService {
   }
 
   deleteInterviewerById(id:number){
-    return this.http.delete(this.interviewerUrl + id)
+    return this.http.delete(this.interviewerUrl + '/' + id)
   }
 }

@@ -3,7 +3,7 @@
     // hrm.recruitment.apilayer -- candidate
     {
       "UpstreamPathTemplate": "/api/candidate",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -15,7 +15,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/candidate/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -29,7 +29,7 @@
     // hrm.recruitment.apilayer -- jobcategory
     {
       "UpstreamPathTemplate": "/api/JobCategory",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -41,7 +41,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/JobCategory/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -54,7 +54,7 @@
     // hrm.recruitment.apilayer -- JobRequirement
     {
       "UpstreamPathTemplate": "/api/JobRequirement",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -66,7 +66,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/JobRequirement/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -79,7 +79,7 @@
     // hrm.recruitment.apilayer -- Submission
     {
       "UpstreamPathTemplate": "/api/Submission",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -91,7 +91,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/Submission/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -104,7 +104,7 @@
     // hrm.recruitment.apilayer -- SubmissionStatus
     {
       "UpstreamPathTemplate": "/api/SubmissionStatus",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -116,7 +116,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/SubmissionStatus/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -131,7 +131,7 @@
     // hrm.interview.apilayer -- Interviewer
     {
       "UpstreamPathTemplate": "/api/Interviewer",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -143,7 +143,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/Interviewer/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -156,7 +156,7 @@
     // hrm.interview.apilayer -- Interviews
     {
       "UpstreamPathTemplate": "/api/Interviews",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -168,7 +168,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/Interviews/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -181,7 +181,7 @@
     // hrm.interview.apilayer -- InterviewType
     {
       "UpstreamPathTemplate": "/api/InterviewType",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -193,7 +193,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/InterviewType/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -206,7 +206,7 @@
     // hrm.interview.apilayer -- Recruiter
     {
       "UpstreamPathTemplate": "/api/Recruiter",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -218,7 +218,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/Recruiter/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -231,7 +231,7 @@
     // hrm.onboard.apilayer -- Employee
     {
       "UpstreamPathTemplate": "/api/Employee",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -243,7 +243,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/Employee/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -256,7 +256,7 @@
     // hrm.onboard.apilayer -- EmployeeCategory
     {
       "UpstreamPathTemplate": "/api/EmployeeCategory",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -268,7 +268,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/EmployeeCategory/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -281,7 +281,7 @@
     // hrm.onboard.apilayer -- EmployeeRole
     {
       "UpstreamPathTemplate": "/api/EmployeeRole",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -293,7 +293,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/EmployeeRole/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -306,7 +306,7 @@
     // hrm.onboard.apilayer -- EmployeeStatus
     {
       "UpstreamPathTemplate": "/api/EmployeeStatus",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -318,7 +318,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/EmployeeStatus/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -331,7 +331,7 @@
     // hrm.authen.apilayer -- Account
     {
       "UpstreamPathTemplate": "/api/Account",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -343,7 +343,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/Account/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -356,7 +356,7 @@
     // hrm.authen.apilayer -- Role
     {
       "UpstreamPathTemplate": "/api/Role",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -368,7 +368,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/Role/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -381,7 +381,7 @@
     // hrm.authen.apilayer -- UserRole
     {
       "UpstreamPathTemplate": "/api/UserRole",
-      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -393,7 +393,7 @@
     },
     {
       "UpstreamPathTemplate": "/api/UserRole/{i}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Options" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {

@@ -9,7 +9,7 @@ import { Interviews } from '../interface/interviews';
 })
 export class InterviewsService {
   constructor(private http:HttpClient) { }
-  interviewsUrl:string = environment.interviewUrl + 'interviews/'
+  interviewsUrl:string = environment.url + 'interviews'
 
   saveInterviews(interviews:Interviews){
     return this.http.post(this.interviewsUrl, interviews)
@@ -21,6 +21,6 @@ export class InterviewsService {
   }
 
   deleteInterviewsById(id:number){
-    return this.http.delete(this.interviewsUrl + id)
+    return this.http.delete(this.interviewsUrl + '/' + id)
   }
 }

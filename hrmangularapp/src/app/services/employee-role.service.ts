@@ -10,7 +10,7 @@ import { EmployeeRole } from '../interface/employeerole';
 export class EmployeeRoleService {
 
   constructor(private http:HttpClient) { }
-  employeeRoleUrl:string = environment.onboardUrl + 'employeeRole/'
+  employeeRoleUrl:string = environment.url + 'employeeRole'
 
   saveEmployeeRole(employeeRole:EmployeeRole){
     return this.http.post(this.employeeRoleUrl, employeeRole)
@@ -22,6 +22,6 @@ export class EmployeeRoleService {
   }
 
   deleteEmployeeRoleById(id:number){
-    return this.http.delete(this.employeeRoleUrl + id)
+    return this.http.delete(this.employeeRoleUrl + '/' + id)
   }
 }

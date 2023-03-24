@@ -10,7 +10,7 @@ import { Submission } from '../interface/submission';
 export class SubmissionService {
 
   constructor(private http:HttpClient) { }
-  submissionUrl:string = environment.recruitUrl + 'submission/'
+  submissionUrl:string = environment.url + 'submission'
 
   saveSubmission(submission:Submission){
     return this.http.post(this.submissionUrl, submission)
@@ -21,6 +21,6 @@ export class SubmissionService {
   }
 
   deleteSubmissionById(id:number){
-    return this.http.delete(this.submissionUrl+ id)
+    return this.http.delete(this.submissionUrl+ '/' + id)
   }
 }

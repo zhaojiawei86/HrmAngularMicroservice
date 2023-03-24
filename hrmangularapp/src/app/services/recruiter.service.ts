@@ -9,7 +9,7 @@ import { Recruiter } from '../interface/recruiter';
 })
 export class RecruiterService {
   constructor(private http:HttpClient) { }
-  recruiterUrl:string = environment.interviewUrl + 'recruiter/'
+  recruiterUrl:string = environment.url + 'recruiter'
 
   saveRecruiter(recruiter:Recruiter){
     return this.http.post(this.recruiterUrl, recruiter)
@@ -21,6 +21,6 @@ export class RecruiterService {
   }
 
   deleteRecruiterById(id:number){
-    return this.http.delete(this.recruiterUrl + id)
+    return this.http.delete(this.recruiterUrl + '/' + id)
   }
 }

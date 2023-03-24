@@ -5,6 +5,8 @@ using System.Net;
 using System.Threading.Tasks;
 using Hrm.Authen.ApplicationCore.Contract.Service;
 using Hrm.Authen.ApplicationCore.Model.Request;
+using JwtAuthenticationManager;
+using JwtAuthenticationManager.Model;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -16,10 +18,12 @@ namespace Hrm.Authen.APILayer.Controller
     public class AccountController : ControllerBase
     {
         private readonly IAccountServiceAsync accountServiceAsync;
+        private readonly JwtTokenHandler jwtTokenHandler;
 
-        public AccountController(IAccountServiceAsync _accountServiceAsync)
+        public AccountController(IAccountServiceAsync _accountServiceAsync, JwtTokenHandler _jwtTokenHandler)
         {
             accountServiceAsync = _accountServiceAsync;
+            jwtTokenHandler = _jwtTokenHandler;
         }
 
         [HttpGet]
@@ -42,6 +46,16 @@ namespace Hrm.Authen.APILayer.Controller
         }
 
         [HttpPost]
+        public ActionResult<AuthenticationResponseModel> Login(AuthenticationRequestModel model)
+        {
+            var response = jwtTokenHandler.GenerateJwtToken(model);
+            if (response == null)
+            {
+                return Unauthorized();
+            }
+            return response;
+        }
+        /*
         public async Task<IActionResult> Post(AccountRequestModel model)
         {
             if (ModelState.IsValid)
@@ -51,6 +65,7 @@ namespace Hrm.Authen.APILayer.Controller
             }
             return BadRequest(model);
         }
+        */
 
         [HttpPut]
         public async Task<IActionResult> Put(AccountRequestModel model, int id)

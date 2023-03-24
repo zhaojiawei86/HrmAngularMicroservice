@@ -10,7 +10,7 @@ import { Role } from '../interface/role';
 export class RoleService {
 
   constructor(private http:HttpClient) { }
-  roleUrl:string = environment.authenUrl + 'role/'
+  roleUrl:string = environment.url + 'role'
 
   saveRole(role:Role){
     return this.http.post(this.roleUrl, role)
@@ -22,6 +22,6 @@ export class RoleService {
   }
 
   deleteRoleById(id:number){
-    return this.http.delete(this.roleUrl + id)
+    return this.http.delete(this.roleUrl + '/' + id)
   }
 }

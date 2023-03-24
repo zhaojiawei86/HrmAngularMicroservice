@@ -37,13 +37,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hrm.Authen.Infrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hrm.Authen.ApplicationCore", "Hrm.Authen.ApplicationCore\Hrm.Authen.ApplicationCore.csproj", "{5AA34F69-452C-49A2-BBDD-F35D73020948}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Hrm.Recruitment.Infrastructure", "Hrm.Recruitment.APILayer\Hrm.Recruitment.Infrastructure\Hrm.Recruitment.Infrastructure.csproj", "{F2DABD8C-3D4A-47B2-80EC-BF9D82AE44E5}"
-EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{25ADA189-F241-4151-A3F9-B8A57459B0E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateway", "APIGateway", "{886734D8-5C0B-4A65-9182-5D58B5EB3ECD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGatewayLayer", "APIGatewayLayer\APIGatewayLayer.csproj", "{4DCBB219-B27F-4D65-8D53-B8DF51BE9F1F}"
+EndProject
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Hrm.Recruitment.Infrastructure", "Hrm.Recruitment.APILayer\Hrm.Recruitment.Infrastructure\Hrm.Recruitment.Infrastructure.csproj", "{4B1F41E0-B695-43D9-8E39-96CB17F6845A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{D2C0B069-0D27-466A-A68F-3A35CAB3E431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtAuthenticationManager", "JwtAuthenticationManager\JwtAuthenticationManager.csproj", "{10F8A5F0-A0B2-43A4-959C-9B050053EA85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +111,10 @@ Global
 		{4DCBB219-B27F-4D65-8D53-B8DF51BE9F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DCBB219-B27F-4D65-8D53-B8DF51BE9F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DCBB219-B27F-4D65-8D53-B8DF51BE9F1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10F8A5F0-A0B2-43A4-959C-9B050053EA85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10F8A5F0-A0B2-43A4-959C-9B050053EA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10F8A5F0-A0B2-43A4-959C-9B050053EA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10F8A5F0-A0B2-43A4-959C-9B050053EA85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -133,5 +141,7 @@ Global
 		{01D10B7D-DAF0-49F1-B100-0250DE7407F9} = {E4C77B69-6791-4CC2-BFCE-E14917567585}
 		{886734D8-5C0B-4A65-9182-5D58B5EB3ECD} = {8571BF2E-5CBB-4B64-9554-8E654A417E94}
 		{4DCBB219-B27F-4D65-8D53-B8DF51BE9F1F} = {886734D8-5C0B-4A65-9182-5D58B5EB3ECD}
+		{10F8A5F0-A0B2-43A4-959C-9B050053EA85} = {D2C0B069-0D27-466A-A68F-3A35CAB3E431}
+		{D2C0B069-0D27-466A-A68F-3A35CAB3E431} = {8571BF2E-5CBB-4B64-9554-8E654A417E94}
 	EndGlobalSection
 EndGlobal

@@ -9,7 +9,7 @@ import { Employee } from '../interface/employee';
 })
 export class EmployeeService {
   constructor(private http:HttpClient) { }
-  employeeUrl:string = environment.onboardUrl + 'employee/'
+  employeeUrl:string = environment.url + 'employee'
 
   saveEmployee(employee:Employee){
     return this.http.post(this.employeeUrl, employee)
@@ -21,6 +21,6 @@ export class EmployeeService {
   }
 
   deleteEmployeeById(id:number){
-    return this.http.delete(this.employeeUrl + id)
+    return this.http.delete(this.employeeUrl + '/' + id)
   }
 }

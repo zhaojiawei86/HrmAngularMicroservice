@@ -10,7 +10,7 @@ import { InterviewType } from '../interface/interviewtype';
 export class InterviewTypeService {
 
   constructor(private http:HttpClient) { }
-  interviewTypeUrl:string = environment.interviewUrl + 'interviewType/'
+  interviewTypeUrl:string = environment.url + 'interviewType'
 
   saveInterviewType(interviewType:InterviewType){
     return this.http.post(this.interviewTypeUrl, interviewType)
@@ -22,6 +22,6 @@ export class InterviewTypeService {
   }
 
   deleteInterviewTypeById(id:number){
-    return this.http.delete(this.interviewTypeUrl + id)
+    return this.http.delete(this.interviewTypeUrl + '/' + id)
   }
 }

@@ -35,5 +35,8 @@
     <ProjectReference Include="..\Hrm.Authen.ApplicationCore\Hrm.Authen.ApplicationCore.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\JwtAuthenticationManager\JwtAuthenticationManager.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@ import { EmployeeCategory } from '../interface/employeecategory';
 export class EmployeeCategoryService {
 
   constructor(private http:HttpClient) { }
-  employeeCategoryUrl:string = environment.onboardUrl + 'employeeCategory/'
+  employeeCategoryUrl:string = environment.url + 'employeeCategory'
 
   saveEmployeeCategory(employeeCategory:EmployeeCategory){
     return this.http.post(this.employeeCategoryUrl, employeeCategory)
@@ -22,6 +22,6 @@ export class EmployeeCategoryService {
   }
 
   deleteEmployeeCategoryById(id:number){
-    return this.http.delete(this.employeeCategoryUrl + id)
+    return this.http.delete(this.employeeCategoryUrl + '/' + id)
   }
 }
